@@ -1,0 +1,25 @@
+{
+  "name": "botland",
+  "version": "1.0.0",
+  "description": "a magical universe in which i have friends.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon --watch src src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/ryannhg/botland"
+  },
+  "keywords": [
+    "chatbots"
+  ],
+  "author": "Ryan Haskell-Glatz",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  },
+  "dependencies": {
+    "lowdb": "^1.0.0"
+  }
+}
