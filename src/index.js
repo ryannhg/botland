@@ -34,17 +34,17 @@ const bots = {
   wendy: require('./bots/wendy')
 }
 
-const botToSwitchTo = (message) =>
-  botName(message)
-    ? bots[botName(message)]
-    : undefined
-
 const botName = (message) => {
   const [ firstWord, secondWord, ...otherWords ] = message.split(' ').filter(exists)
   const isBotName = isOneOf(Object.keys(bots))
   const isSwitchingToBot = isBotSwitchCommand(firstWord) && isBotName(secondWord) && isEmpty(otherWords)
   return isSwitchingToBot ? secondWord : undefined
 }
+
+const botToSwitchTo = (message) =>
+  botName(message)
+    ? bots[botName(message)]
+    : undefined
 
 const isSwitchingToBot = (message) =>
   botToSwitchTo(message) !== undefined

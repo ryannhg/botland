@@ -25,6 +25,6 @@ module.exports = {
     ask: (question) => io.ask(`${color(format.bold(name))}: ${parse(question)}\n${format.bold(username())}: `),
     description () { return description || `I don't know what ${this.name} does.` },
     greet () { return this.ask(randomlyPickFrom(greetings)) },
-    talk (message) { return talk(this, message) }
+    talk (message) { return Promise.resolve(talk(this, message)) }
   })
 }
