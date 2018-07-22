@@ -20,6 +20,6 @@ Behind the scenes, they're all just making requests to APIs somewhere.
 
 ### Join Botland
 
-1. `npm install -g botland`
+1. `npm install`
 
-1. `botland`
+1. `npm start`
