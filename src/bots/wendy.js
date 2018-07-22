@@ -2,7 +2,6 @@ const axios = require('axios')
 const bot = require('../bot')
 const db = require('../db')
 const format = require('../format')
-const { debug } = require('../utils')
 
 const weather = {
   for: (zip) =>
